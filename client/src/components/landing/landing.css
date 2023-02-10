@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+
+.landing-section {
+    /* position: relative; */
+    /* width: 100%; */
+    height: fit-content;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* overflow: hidden; */
+    background: linear-gradient(rgb(0, 0, 0, .0), rgb(0, 0, 0, .2)), url(../../images/paris-1.jpg);
+    background-position-x: right;
+    background-position-y: 80%;
+    background-size: cover;
+    /* animation: zoomin 40s linear infinite; */
+}
+
+/* ===== Landing Page text Styling ===== */
+.welcoming-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 30px; */
+    background: radial-gradient( rgb(0, 0, 0, .7), transparent);
+    padding: 10px;
+}
+
+.welcoming {
+    color: white;
+    text-align: center;
+}
+
+#wel-1 {
+    color: #e1bc79;
+    font-size: 30px;
+    font-family: 'Itim', cursive;
+    display: none;
+}
+
+#wel-2 {
+    /* color: gold; */
+    color: orange;
+    font-size: 40px;
+    font-family: 'Raleway';
+    /* font-family: 'Paprika'; */
+}
+
+#wel-3 {
+    font-size: 40px;
+    font-family: 'Itim', cursive;
+}
+
+#wel-3 span {
+    text-decoration-line: underline;
+    text-decoration-style: "solid";
+    text-decoration-color: rgba(230,219,0,1);
+    text-decoration-skip-ink: 7px;
+    text-decoration-thickness: 3px;
+    font-family: 'Itim', cursive;
+}
+
+
+@keyframes zoomin {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 120%;
+        background-position-y: bottom;
+        background-position-x: right;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    /* #mini-book {
+        background-color: red;
+        display: none;
+    } */
+}
+
+.example {
+    width: 200px;
+    height: 50px;
+    background-color: antiquewhite;
+}

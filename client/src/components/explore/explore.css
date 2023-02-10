@@ -1,0 +1,238 @@
+.explore-section {
+    height: fit-content;
+    min-height: calc(100vh - 70px);
+    padding-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 70px;
+}
+
+#explore-span {
+    padding: 50px 0 80px 0 ;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+.explore-section h3 {
+    padding: 30px 0 50px 0;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    font-size: 20px;
+}
+
+.explore-divs-container {
+    width: 100%;
+    height: calc(100% - 60px);
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.explore-div {
+    width: 290px;
+    height: fit-content;
+    height: 400px;
+    box-shadow: 0 0 3px -1px black;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.explore-div:hover .explore-image-container::before,
+ .explore-div:hover .explore-image-container::after{
+    width: 50%;
+}
+
+.explore-div:hover .see-more-container {
+    display: flex;
+    opacity: 0;
+    animation: display .5s linear forwards;
+}
+
+@keyframes display {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.explore-image-container {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.explore-image-container::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    transition: all .5s ease-in-out;
+}
+
+.explore-image-container::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+    transition: all .5s ease-in-out;
+}
+
+.see-more-container {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    display: none;
+}
+
+.see-more {
+    box-sizing: content-box;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.see-more-text {
+    color: white;
+}
+
+#exp1 {
+    background-image: url(../../images/dubai.jpg);
+}
+
+#exp2 {
+    background-image: url(../../images/spain.jpg);
+}
+
+#exp3 {
+    background-image: url(../../images/sheikh-zayed-mosque.jpg);
+}
+
+#exp4 {
+    background-image: url(../../images/car-in-desert.jpg);
+}
+
+#exp5 {
+    background-image: url(../../images/sea-yatch-and-mountian.jpg);
+}
+
+#exp6 {
+    background-image: url(../../images/peacefull-lake.jpg);
+}
+
+#exp7 {
+    background-image: url(../../images/spain.jpg);
+}
+
+#exp8 {
+    background-image: url(../../images/car-in-desert.jpg);
+}
+
+
+.explore-text-container {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+}
+
+
+/* #exp2 {
+    background-image: url(../../images );
+}
+
+#exp3 {
+    background-image: url(../../images );
+}
+
+#exp5 {
+    background-image: url(../../images );
+}
+
+#exp6 {
+    background-image: url(../../images );
+}
+
+#exp7 {
+    background-image: url(../../images );
+}
+
+#exp8 {
+    background-image: url(../../images );
+} */
+
+
+
+.explore-image {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+
+.explore-place-container {
+    font-size: 13px;
+}
+
+.explore-info-container {
+    margin-top: 10px;
+}
+
+.explore-review-container {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.explore-hr {
+    margin-top: 15px;
+    border: 0.5px solid silver;
+}
+
+
+.explore-bottom-container {
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.pre-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* .new-price {
+    font-size: 15px;
+} */

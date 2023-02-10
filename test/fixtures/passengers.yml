@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure: MyString
+  destination: MyString
+  firstName: MyString
+  middleName: MyString
+  lastName: MyString
+  nationality: MyString
+  gender: MyString
+  title: MyString
+  age: 1
+  departureDate: 2023-02-08
+  returnDate: 2023-02-08
+
+two:
+  departure: MyString
+  destination: MyString
+  firstName: MyString
+  middleName: MyString
+  lastName: MyString
+  nationality: MyString
+  gender: MyString
+  title: MyString
+  age: 1
+  departureDate: 2023-02-08
+  returnDate: 2023-02-08
