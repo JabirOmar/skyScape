@@ -30,6 +30,8 @@
 
 .service-cards-container div:nth-child(even){
     animation-delay: -5s;
+    background-color: darkorange;
+    align-self: flex-end;
 }
 
 .service-card {
@@ -45,10 +47,10 @@
     text-transform: capitalize;
     background-color: black;
     color: white;
-    animation: shake 10s linear infinite;
+    /* animation: shake 10s linear infinite; */
 }
 
-@keyframes shake {
+/* @keyframes shake {
     0% {
         transform: translateX(0);
     }
@@ -58,7 +60,7 @@
     100% {
         transform: translateX(0);
     }
-}
+} */
 
 .service-card-top {
     display: flex;

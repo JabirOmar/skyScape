@@ -14,7 +14,7 @@ function Main() {
        <NavBar />
       <div className='small-container'>
         <Landing />
-        {/* <MiniBook /> */}
+        <MiniBook />
       </div>
       <Ticket />
       <Explore />

@@ -6,7 +6,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway';
-    scroll-behavior: auto;
+    /* scroll-behavior: auto; */
+    scroll-behavior: smooth;
 }
 
 body {
