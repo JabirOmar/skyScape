@@ -1,17 +1,10 @@
 .mini-book-form {
-    position: absolute;
-    top: calc(100% - 20px);
-    left: 50%;
-    width: calc(100% - 20%);
-    height: fit-content;
-    min-height: 145px;
-    display: table;
-    /* bottom: 0; */
-    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    flex-wrap: wrap;
     padding: 30px;
     padding-bottom: 40px;
-    background-color: white;
-    backdrop-filter: blur(7px);
+    margin: 0 20px;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 

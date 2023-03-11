@@ -1,0 +1,191 @@
+/* ====== Main Price Section Start ====== */
+.price-section {
+    height: 100vh;
+    /* max-width: 1600px; */
+    display: flex;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+/* ====== Main Price Section End ====== */
+
+
+
+/* ====== Left Price Section Start ====== */
+.price-left-div {
+    width: 40%;
+    height: 100vh;
+    background: url(../../images/12804210_5053309.jpg);
+    background-size: cover;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* ====== Left Price Section End ====== */
+
+
+
+/* ====== Right Price Section Start ====== */
+.price-right-div {
+    position: relative;
+    width: 60%;
+    /* display: flex;
+    flex-direction: column; */
+    overflow: scroll;
+    display: grid;
+    grid-template-rows: 100px 1fr 120px;
+}
+
+#pricing-right-top {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding-top: 40px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#pricing-right-top p {
+    text-transform: capitalize;
+}
+
+#pricing-right-top p span {
+    color: darkorange;
+}
+
+#pricing-right-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* overflow: scroll; */
+    padding: 50px 0;
+}
+
+#pricing-right-bottom {
+    /* position: absolute; */
+    /* top: 100%; */
+    /* left: 0; */
+    /* width: 100%; */
+    text-align: center;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 10px;
+    padding: 50px 0;
+    background-color: black;
+    color: white;
+}
+
+#pricing-right-bottom p span {
+    color: orange;
+}
+
+#flight-card-container {
+    width: fit-content;
+    padding: 3px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.flight-card-wrapper {
+    width: 90%;
+    min-width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    font-size: 18px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.flight-card-left {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.flight-card-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-div span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 500;
+}
+
+.price-and-class-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.class-div-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.class-div {
+    border: 1px solid;
+    /* height: 60%; */
+    height: 100px;
+    padding: 0 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.class-div:hover {
+    box-shadow: 0 0 4px -1px rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+/* ====== Right Price Section End ====== */
+
+
+
+/* ====== Left Price Section Start ====== */
+
+/* ====== Left Price Section End ====== */
+
+
+/* ====== Responibility Start ====== */
+@media screen and (max-width: 1200px) {
+    .class-div{
+        transform: scale(0.9);
+    }
+
+    .flight-card-left span {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .class-div{
+        transform: scale(0.8);
+    }
+
+    .flight-card-left span {
+        transform: scale(0.8);
+    }
+}
+/* ====== Responibility End ====== */

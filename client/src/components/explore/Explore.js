@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import { BiSearchAlt2 } from 'react-icons/bi'
 import './explore.css'
 
 function Explore() {
 
-  const [places, setPlaces] = useState([])
+  // const [places, setPlaces] = useState([])
 
   // useEffect(() => {
   //   fetch('http://localhost:3000/explores')

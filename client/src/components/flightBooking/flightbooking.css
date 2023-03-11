@@ -1,0 +1,103 @@
+.flight-booking-section {
+    position: fixed;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#flight-detail-wrapper {
+    width: 100%;
+    height: 100vh;
+    /* overflow: scroll; */
+    transform: translateY(-0%);
+}
+
+#flight-mini-book-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../images/dark-board-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#flight-flight-Price {
+    width: 100vw;
+    height: 100vh;
+}
+
+#flight-passenger-detail {
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+#flight-payment {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow-y: scroll;
+}
+
+
+.ticket-conatiner {
+    width: 800px;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.ticket-left {
+    width: 550px;
+    height: 100%;
+    border-right: 3px dashed black;
+    display: grid;
+    grid-template-rows: 40px 1fr 30px;
+}
+
+#ticket-left-1 {
+    background-color: gold;
+    border-top-left-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 18px;
+    text-align: end;
+}
+
+#ticket-left-3 {
+    background-color: gold;
+    border-bottom-left-radius: 20px;
+}
+
+.ticket-right {
+    width: calc(100% - 550px);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40px 1fr 30px;
+}
+
+#ticket-right-1 {
+    background-color: gold;
+    border-top-right-radius: 20px;
+}
+
+#ticket-right-3 {
+    background-color: gold;
+    border-bottom-right-radius: 20px;
+}

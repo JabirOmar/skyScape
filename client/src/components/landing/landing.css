@@ -8,12 +8,12 @@
     /* position: relative; */
     /* width: 100%; */
     height: fit-content;
-    min-height: 70vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     /* overflow: hidden; */
-    background: linear-gradient(rgb(0, 0, 0, .0), rgb(0, 0, 0, .2)), url(../../images/paris-1.jpg);
+    background: linear-gradient(rgb(0, 0, 0, .0), rgb(0, 0, 0, .2)), url(../../images/istanbul-night.jpg);
     background-position-x: right;
     background-position-y: 80%;
     background-size: cover;
@@ -27,7 +27,7 @@
     justify-content: center;
     align-items: center;
     /* line-height: 30px; */
-    background: radial-gradient( rgb(0, 0, 0, .7), transparent);
+    background: radial-gradient( rgb(0, 0, 0), transparent);
     padding: 10px;
 }
 

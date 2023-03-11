@@ -1,357 +1,221 @@
 .booking-section {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    max-width: 1450px;
-    height: 100vh;
-    background-color: #fff;
-    transition: all 0.2s;
-}
-
-.booking-section *::selection {
-    background-color: transparent;
-}
-
-.booking-section.display {
-    display: block;
-}
-
-/* ===== Booking Personel ===== */
-.booking-Personel {
-    width: 100%;
-    height: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
     display: flex;
+    /* overflow: hidden; */
+    /* z-index: 3000; */
 }
 
-.booking-Personel.hide {
+#mini-book-inside-book-section {
     display: none;
+    background-color: aqua;
 }
 
-.booking-Personel-left {
-    width: 50%;
-    background: url(../../images/dark-board-1.jpg);
-    background-position: 30%;
+#hiding-section {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    background-color: aqua;
+}
+/* ===== Booking Left Container ====== */
+
+.booking-left-container{
+    width: 40%;
+    background-image: url(../../images/black-1.jpg);
+    background-position: center;
     background-size: cover;
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
-.booking-Personel-left h1 {
-    font-size: 40px;
-    color: aliceblue;
+#booking-left-content-wrapper h1 {
     text-align: center;
+    font-size: 40px;
 }
 
-.booking-Personel-left ul {
-    width: 100%;
-    color: aliceblue;
-    margin-top: 30px;
-    margin-left: 20px;
-    list-style: none;
+/* ===== Booking Right Container ====== */
+.booking-right-container {
+    position: relative;
+    width: 60%;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    background-image: url(../../images/white-1.jpg);
+    background-position: center;
+    background-size: cover;
+    /* animation: zoom-in-out 15s linear infinite; */
+}
+
+@keyframes zoom-in-out {
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 130%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+/* == right booking top == */
+#right-booking-top {
+    text-align: center;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    align-items: last baseline;
+    justify-content: center;
 }
-
-.booking-Personel-left ul li {
+/* == right booking middle == */
+#right-booking-middle {
     display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.pointer {
-    color: #e1fc79;
-}
-
-/* Right Personel */
-.booking-Personel-right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 
-#personel-pre-display {
-    font-size: 18px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* Form Container */
-
-.passengers-number-container {
-    width: 400px;
-    /* height: 500px; */
-    border-radius: 10px;
-    box-shadow: 0 0 3px -1px black;
-    padding: 15px 20px;
+.passenger-info-form {
+    height: 350px;
+    /* border: 1px solid; */
+    box-sizing: content-box;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    background-color:  rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 10px;
+    gap: 25px;
 }
 
-.passengers-number-title-span {
+.select-container {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.passenger-info-form label {
     color: gray;
 }
 
-#adult-passengers-couter {
-    margin-top: 10px;
-}
-
-.couter-countainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.couter-countainer span {
-    font-size: 16px;
-}
-
-.counter {
-    display: flex;
-    gap: 3px;
-}
-
-.couter-box {
-    width: 45px;
+.passenger-info-form select {
+    width: 150px;
     height: 40px;
-    box-shadow: 0 0 2px -1px black;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    padding: 0 5px;
     font-size: 18px;
-}
-
-.couter-box:nth-child(2) {
-    cursor: default;
-}
-
-.couter-box:hover {
-    background-color: #f5f5f5;
-}
-
-.couter-box:nth-child(2):hover {
-    background: transparent;
-}
-
-.classes {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.choosed-class {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    box-shadow: 0 0 3px 0.5px rgb(66, 66, 66);
-    border-color: #e1bc79;
-    cursor: pointer;
-}
-
-.personel-button-container {
-    width: 100%;
-    margin-top: 20px;
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-#personel-confirm-button {
-    width: 100%;
-    height: 50px;
-    border: none;
     outline: none;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all 0.5s;
+    border-radius: 4px;
+    border: none;
+    -webkit-appearance: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 3px 1px;
+    background-color: transparent;
+}
+
+.dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.passenger-info-form input {
+    width: 150px;
+    height: 40px;
+    padding: 0 5px;
     font-size: 18px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.1) 0px 0px 3px 1px;
+    text-transform: capitalize;
 }
 
-#personel-confirm-button:hover {
-    background-color: #000;
-    color: white;
-}
-
-
-
-/* ====== available-flights ====== */
-/* .available-flights {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: none;
-}
-
-.available-flights.show {
-    display: flex;
-}
-
-.available-flights-left {
-    width: 40%;
-    background: url(../../images/man-lake-and-mountains.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.available-flights-right {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* ====== Fill Forms ===== */
-.fill-forms {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: none;
-}
-
-.fill-forms.show {
-    display: block;
-}
-
-.fill-forms h1 {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    display: block;
-    color: #e1bc79;
-    /* margin-top: 30px; */
-}
-
-.form-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-/* ===== Form Right ===== */
-.fill-form-right {
-    width: 40%;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* ===== Form Left ===== */
-.fill-form-left {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Passengers Card Form */
-
-.passenger-card-container {
-    width: fit-content;
-    margin: 60px auto;
-}
-
-.card-title {
-    margin-left: 10px;
-}
-
-.passenger-card {
-    margin-top: 5px;
-    width: 600px;
-    min-height: 200px;
-    border: 0.5px solid;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.passengers-card-line-one {
-    display: flex;
-    /* gap: 10px; */
-    justify-content: space-between;
-}
-
-.passenger-info-wrapper {
+.indi-conta {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
 }
 
-.passenger-info-wrapper label {
-    margin-left: 10px;
-}
-
-/* .title-div {
-    position: relative;
-} */
-
-.title-div label {
-    margin-left: 0;
-}
-
-.title-options {
-    position: relative;
-    width: 50px;
-    height: 30px;
-    box-shadow: 0 0 2px -1px black;
-    border-radius: 5px;
-}
-
-.title-options ul {
-    list-style: none;
-    position: absolute;
-    top: 35px;
-    width: 100%;
-    background-color: #fff;
-    border: 0.3px solid gray;
-    border-radius: 5px;
-    padding: 10px;
+.cards-conta {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* .title-options {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 50px;
-    padding: 10px;
-    list-style: none;
-    background-color: #f5f5f5;
-    box-shadow: 0 0 3px -1px black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    display: none;
-} */
+}
 
-.passenger-input {
-    width: 160px;
-    height: 30px;
-    border: none;
-    box-shadow: 0 0 2px -1px black;
+#title-wrapper {
+    width: 150px;
+}
+
+#general-container select{
+    width: 150px;
+}
+
+#submit-btn {
+    width: 150px;
+    height: 40px;
+    background-color: black;
     border-radius: 5px;
-    outline: none;
+    border: none;
+    color: white;
     font-size: 18px;
-    padding: 0 10px;
-
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 
+/* ====== Popup ===== */
+/* .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 304px;
+    background-color: white;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    transform: translateY(-50%) translateX(-50%);
+} */
 
 
+@media screen and (max-width: 967px) {
+    .booking-section {
+        position: sticky;
+        flex-direction: column;
+        /* height: fit-content; */
+    }
 
+    .booking-left-container {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .booking-right-container {
+        width: 100%;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 587px) {
+    #right-booking-middle {
+        margin: 50px 0 0 0;
+    }
+    .cards-conta {
+        flex-direction: column;
+    }
+
+    .passenger-info-form {
+        height: fit-content;
+    }
+
+    .passenger-info-form input {
+        width: 300px;
+    }
+
+    #general-container select{
+        width: 300px;
+    }
+}

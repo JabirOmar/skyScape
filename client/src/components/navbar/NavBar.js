@@ -63,8 +63,8 @@ function NavBar() {
     }
 
     const bookNow = () => {
-        // let booking = document.querySelector('.booking-section')
-        // booking.classList.add('display')
+        let ticketArea = document.querySelector('.ticket-popup')
+        ticketArea.classList.add('show')
     }
 
   return (
@@ -88,7 +88,7 @@ function NavBar() {
     
         {/* ===== Right NavBar ==== */}
         <div className='right-nav'>
-           <button onClick={bookNow}>Book Now</button>
+           <button onClick={bookNow}>My Ticket</button>
            <div id='menu' onClick={menu}>
             <span className='bar'></span>
             <span className='bar'></span>

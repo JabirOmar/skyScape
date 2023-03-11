@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineCaretDown } from 'react-icons/ai'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './miniBook.css'
 
 function MiniBook() {
     
     const [cities, setCities] = useState([])
+    const [departure, setDeparture] = useState('')
+    const [destination, setDestination] = useState('')
+    const [departureDate, setDepartureDate] = useState('')
+    const [returnDate, setReturnDate] = useState('')
+
+    useEffect(() => {
+        let departureValue = document.getElementById('dep-selected').innerText
+        let destinationValue = document.getElementById('des-selected').innerText
+        setDeparture(departureValue)
+        setDestination(destinationValue)
+    },[])
 
     useEffect(() => {
         fetch('http://localhost:3000/countries')
@@ -13,9 +24,9 @@ function MiniBook() {
         .then(setCities)
     },[])
 
-    console.log(cities)
 
     function handleDeparture() {
+        // let depdate = document.getElementById('depart-date')
         let depOptions = document.getElementById('dep-options')
         let desOptions = document.getElementById('des-options')
         let tripOptions = document.getElementById('trip-options')
@@ -70,7 +81,7 @@ function MiniBook() {
 
         let li = document.querySelectorAll('.ways')
         let selectedWay = document.getElementById('way-selected')
-        let returnDate = document.getElementById('return-date')
+        // let returnDate = document.getElementById('return-date')
 
         li.forEach(link => {
             link.addEventListener('click', function(){
@@ -95,9 +106,15 @@ function MiniBook() {
     }
 
     const navigate = useNavigate()
+    const passengerInfoOne = {
+        departure,
+        destination,
+        departureDate,
+        returnDate
+    }
     function handleSubmit(e) {
+        e.preventDefault()
 
-        // const returningDate = document.getElementById('return-date')
         let departure = document.getElementById('dep-selected').innerText
         let destination = document.getElementById('des-selected').innerText
         let departDateInput = document.getElementById('depart-date')
@@ -106,15 +123,17 @@ function MiniBook() {
 
         if (departure === 'From' || destination === 'To' || departure === destination){
             alert('Fill the Departure and Destination correctly')
-             e.preventDefault()
         }else if(departDateInput.value.length === 0){
             alert('Fill The Departure Date Correctly')
-             e.preventDefault()
         }else if(returnDate.classList.contains('returning') && returnDateInput.value.length === 0){
             alert('Fill The Return Date Correctly')
-             e.preventDefault()
         }else {
-            navigate("/booking")
+            navigate("/flight-price")
+            // fetch('http://localhost:3000/passengers', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify(passengerInfoOne)
+            // }).then(console.log(passengerInfoOne))
         }
     }
 
@@ -132,7 +151,7 @@ function MiniBook() {
                 </div>
                 <ul className='options' id='dep-options'>
                     {
-                        cities.sort( (a, b) => a.cityOne > b.cityThree ? 1 : -1)
+                        cities.sort( (a, b) => a.countryName > b.countryName ? 1 : -1)
                         .map(city => {
                             return(
                                 <div className='country-list' key={city.id}>
@@ -153,12 +172,12 @@ function MiniBook() {
             <label className='input-label'>Destination</label>
             <div className='dropdown'>
                 <div className='select' onClick={handleDestination}>
-                    <span id='des-selected'>To</span>
+                    <span id='des-selected' >To</span>
                     <AiOutlineCaretDown />
                 </div>
                 <ul className='options' id='des-options'>
                     {
-                        cities.map(city => {
+                        cities.sort( (a, b) => a.countryName > b.countryName ? 1 : -1 ).map(city => {
                             return(
                                 <div className='country-list' key={city.id}>
                                     <span className='coutry'>{city.countryName}</span>
@@ -191,7 +210,7 @@ function MiniBook() {
             <label className='input-label'>Depart</label>
             <div className='dropdown date-container'>
                 <div className='select'>
-                    <input className='date-input' id='depart-date'  type='date' placeholder='none' />
+                    <input className='date-input' id='depart-date'  type='date' value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}  />
                 </div>
             </div>
         </div>
@@ -200,7 +219,7 @@ function MiniBook() {
             <label className='input-label'>Return</label>
             <div className='dropdown date-container'>
                 <div className='select'>
-                    <input className='date-input' id='return-date-input' type='date' />
+                    <input className='date-input' id='return-date-input' type='date' value={returnDate} onChange={(e) => setReturnDate(e.target.value)}  />
                 </div>
             </div>
         </div>
@@ -216,5 +235,6 @@ function MiniBook() {
     </form>
   )
 }
+
 
 export default MiniBook

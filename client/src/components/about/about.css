@@ -2,100 +2,22 @@
 
 .about-section {
     height: fit-content;
-    min-height: calc(100vh - 70px);
+    height: calc(100vh - 70px);
     background-color: #f5f5f5;
     display: flex;
+    align-items: center;
+    justify-content: center;
     scroll-margin-top: 70px;
-}
-
-/* #about-us-title {
-    font-size: 20px;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: darkslategray;
-    gap: 10px;
-} */
-
-/* #hearder-line {
-    display: block;
-    width: 15px;
-    height: 1.5px;
-    background-color: silver;
-}
-
-#about-section-main {
-    height: fit-content;
-    min-height: calc(100vh - 70px);
-    display: flex;
-    align-items: center;
-    background-color: antiquewhite;
-} */
-
-
-/* ===== Left about Styling =====  */
-.left-about {
-    width: 50%;
-    height: calc(100vh - 70px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#left-about-img {
-    width: 90%;
-    height: 80%;
-    background: url(../../images/man-lake-and-mountains.jpg);
+    background: url(../../images/white-1.jpg);
+    background-position: center;
     background-size: cover;
-    background-position: left;
 }
 
-/* ===== Right about Styling =====  */
-.right-about {
+#about-text {
     width: 50%;
-    height: calc(100xh - 70px);
+    text-align: center;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
 }
-
-#right-content-container {
-    width: 90%;
-    height: 80%;
-}
-
-#about-us-title-container {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-#about-us-title {
-    font-size: 18px;
-}
-
-#header-line{
-    display: block;
-    width: 13px;
-    height: 1.4px;
-    background-color: darkslategray;
-}
-
-#about-us-sentences {
-    /* display: flex; */
-    /* align-items: center; */
-    margin-top: 30px;
-    padding: 0 10px;
-}
-
-#about-us-sentences p {
-    font-size: 16px;
-    font-family: 'Poppins';
-    font-weight: 300;
-}
-
-

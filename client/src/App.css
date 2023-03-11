@@ -1,24 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Raleway';
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: #7f7e7e;
 }
 
 .App {
     position: relative;
-    max-width: 1450px;
+    max-width: 1600px;
     min-height: 200vh;
     background-color: #f5f5f5;
     margin: 0 auto;
     overflow-x: hidden;
+}
+
+.app-container {
+    max-width: 1600px;
+    /* display: flex; */
+    margin: 0 auto;
 }
 
 .small-container {

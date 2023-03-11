@@ -1,8 +1,9 @@
 .explore-section {
     height: fit-content;
     min-height: calc(100vh - 70px);
+    /* max-height: 1100px; */
     padding-bottom: 50px;
-    margin-top: 100px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     scroll-margin-top: 70px;
@@ -35,7 +36,7 @@
 }
 
 .explore-div {
-    width: 290px;
+    width: 300px;
     height: fit-content;
     height: 400px;
     box-shadow: 0 0 3px -1px black;
@@ -88,6 +89,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(3px);
     transition: all .5s ease-in-out;
+    border-top-left-radius: 10px;
 }
 
 .explore-image-container::after {
@@ -100,6 +102,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(3px);
     transition: all .5s ease-in-out;
+    border-top-right-radius: 10px;
 }
 
 .see-more-container {
